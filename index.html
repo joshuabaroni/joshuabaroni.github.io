@@ -1,1 +1,131 @@
-<h1> this is a header </h1>
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Baroni: FullStack Developer</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+    crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:300,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo"> <!-- in div in case SVG etc. -->
+        <img src="img/logo.png" alt="">
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list"></ul>
+        <!-- Double underscore tells compiler that list is a component of the nav class -->
+          <li class="nav_item"><a href="#" class="nav__link">Home</a></li>
+          <li class="nav_item"><a href="#" class="nav__link">Resume and Projects</a></li>
+          <li class="nav_item"><a href="#" class="nav__link">About Me</a></li>
+          <li class="nav_item"><a href="#" class="nav__link">Other</a></li>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+      <!-- Use ids for anchoring, JS, etc. -->
+      <h1 class="section__title section__title--intro">
+        <!-- Double hyphen represents a class modifier -->
+        Hi, <strong>Josh Baroni</strong> here!
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Full Stack Developer
+      </p>
+      <img src="img/ProfilePicBaroni2016.jpg" alt="Josh Baroni Portfolio Pic">
+    </section>
+
+    <!-- Resume and Background -->
+    <section class="resume-and-background" id="resume-and-background">
+      <h2 class="section__title section__title--resume-and-background">What I do</h2>
+      <div class="resume-and-background">
+        <div class="resume">
+          <h3>
+            Resume (Updated July 2020)
+          </h3>
+          <p>
+            todo: place resume here
+          </p>
+      </div> <!-- / resume-and-background -->
+
+      <a href="#resume-and-background" class="btn">Resume and Background</a>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-me" id="about">
+      <!-- Can use <header></header> here instead, but not needed -->
+      <h2 class="section__title section__title--about">Who am I?</h2>
+      <p class="section__subtitle section__subtitle--about"></p>
+
+      <div class="about-me__body">
+        <p></p>
+        <p></p>
+        <p></p>
+        <!-- etc... -->
+      </div>
+
+      <img src="img/BuddhistTemplePose.JPG" alt="Buddhist Temple Pose">
+    </section>
+
+    <!-- Other -->
+    <section class="projects" id="projects">
+      <h2 class="section__title">TODO</h2>
+      <p class="section__subtitle"></p>
+
+      <!-- <div class="portfolio">
+        <a href="#" class="portfolio__item">
+          <img src="portfolio-01.jpg" alt="" class="portfolio__img">
+        </a>
+        
+      </div> -->
+      <div class="project1">
+        <h3>
+          Google Search Monopoly
+        </h3>
+        <p>
+          todo: link to Monopoly project
+        </p>
+      </div> <!-- / project1 -->
+      <div class="project2">
+        <h3>
+          Naive Bayes in Java
+        </h3>
+        <p>
+          todo: link to NB Java project repo
+        </p>
+      </div> <!-- / project2 -->
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <a href="mailto:joshua.baroni.16@cnu.edu" class="footer-link">joshua.baroni.16@cnu.edu</a>
+      <ul class="social-list">
+        <!-- TODO replace with drier code (using a <list>) -->
+        <li class="social-list__item"><a class="social-list__link"
+          href="https://github.com/joshuabaroni">github</a>
+        </a></li>
+        <li class="social-list__item"><a class="social-list__link"
+          href="https://www.linkedin.com/in/joshua-baroni-b50580177">linkedin</a>
+        </a></li>
+        <li class="social-list__item"><a class="social-list__link"
+          href="https://www.facebook.com/profile.php?id=100020207475034">facebook</a>
+        </a></li>
+        <li class="social-list__item"><a class="social-list__link"
+          href="https://www.twitch.tv/asnlivesmtr">twitch</a>
+        </a></li>
+      </ul>
+    </footer>
+
+  </body>
+</html>
