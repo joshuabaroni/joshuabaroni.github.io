@@ -14,7 +14,7 @@
     "react-scripts": "3.4.1"
   },
   "properties": {
-    "homepage": "http://joshuabaroni.github.io/home"
+    "homepage": "https://joshuabaroni.github.io/"
   },
   "scripts": {
     "start": "react-scripts start",
