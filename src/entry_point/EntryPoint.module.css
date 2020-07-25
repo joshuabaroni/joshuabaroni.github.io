@@ -1,0 +1,32 @@
+.Home {
+    text-align: center;
+}
+
+.AboutMe {
+    max-width: 60%;
+    margin: auto;
+    background: local;
+}
+
+.BorderedDiv {
+    margin: 20px;
+    border-top: solid;
+    border-bottom: solid;
+    border-left: none;
+    border-right: none;
+}
+
+.LinkButton {
+    border-radius: 25px;
+    position: relative;
+    background: rgb(0, 150, 196);
+    color: rgb(190, 190, 190);
+    padding: auto;
+    width: 100px;
+    height: 35px;
+}
+
+.LinkButton:hover {
+    background: #61DBFB;
+    color: rgb(54, 54, 54);
+}
