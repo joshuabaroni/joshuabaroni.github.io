@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import {pdfjs, Document} from 'react-pdf';
 import classes from './EntryPoint.module.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Menu from '../menu/Menu.js'
-import TextOnly from '../pages/TextOnly.js'
+import BasicPage from '../pages/BasicPage.js'
 import Headshot from '../img/ProfilePicBaroni2016.jpg'
-import Resume from "../img/JoshBaroniResume2020.pdf"
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import Resume from "../img/JoshBaroniResume2020-1.jpg"
 
 const constants = {
     name: "Joshua Baroni",
@@ -15,7 +12,7 @@ const constants = {
     sections: [
         "Home",
         "About Me",
-        "Resume",
+        "My Resume",
         "Projects",
         "Contact Me"
     ]
@@ -39,15 +36,14 @@ const LinkButton = (props) => {
 class EntryPoint extends Component {
     render() {
         return (
-        <div className={classes.Home}>
+        <div id={constants.sections[0]} className={classes.Home}>
             <Menu sections={constants.sections}/>
             <h1>{constants.name}: {constants.title}</h1>
             <LinkButton name={"Github"} href="https://github.com/joshuabaroni" />
             <LinkButton name={"LinkedIn"} href="https://www.linkedin.com/in/joshua-baroni-b50580177/" />
             <LinkButton name={"Facebook"} href="https://www.facebook.com/profile.php?id=100020207475034" />
-            <div className={classes.BorderedDiv}>
-                <TextOnly ignore={classes.Ignore/* todo needs formatting */}
-                    className={classes.AboutMe}
+            <div id={constants.sections[1]} className={classes.BorderedDiv}>
+                <BasicPage ignore={classes.Ignore/* todo needs formatting */}
                     classTitle={constants.sections[1]}
                     img={Headshot}
                     body={`Hi, my name is Josh Baroni and welcome to my website!
@@ -57,8 +53,23 @@ class EntryPoint extends Component {
                     meantime, feel free to check out some of the projects I've worked on over
                     the years.`}
                 />
-                <Document
-                    file={Resume}
+            </div>
+            <div id={constants.sections[2]} className={classes.BorderedDiv}>
+                <BasicPage
+                    classTitle={`${constants.sections[2]}: Updated 2020`}
+                    img={Resume /* TODO uses JPG instead of PDF embed */}
+                    download={classes.Ignore /* TODO needs download link */}
+                />
+            </div>
+            {/* TODO link project pages */}
+            <div id={constants.sections[4]} className={classes.BorderedDiv}>
+                <BasicPage
+                    className={classes.Bottom}
+                    classTitle={`${constants.sections[4]}`}
+                    body="Email: joshua.baroni.16@cnu.edu
+                    Cell: (571)-389-2922 (Text me unless it's urgent!)
+                    Discord: HesAMusicMan#2934
+                    Contact Hours: 9a-5p EST Mon-Sat"
                 />
             </div>
         </div>

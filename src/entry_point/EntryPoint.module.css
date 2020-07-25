@@ -11,9 +11,20 @@
 .BorderedDiv {
     margin: 20px;
     border-top: solid;
-    border-bottom: solid;
+    border-bottom: none;
     border-left: none;
     border-right: none;
+}
+
+.Bottom {
+    display: inline-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.Bottom h2 {
+    min-width: 150px;
 }
 
 .LinkButton {

@@ -6,7 +6,7 @@ const RenderNavs = (props) => {
     let navLinkComponents = [];
     props.sections.map(section => {
         return navLinkComponents.push(
-            <Nav.Link className={classes.NavLink} href={`${section}`}>{section}</Nav.Link>
+            <Nav.Link className={classes.NavLink} href={`#${section}`}>{section}</Nav.Link>
         )
     })
     return (
