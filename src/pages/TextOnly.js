@@ -10,12 +10,10 @@ const TextOnly = ( props ) => {
             <h2>
                 {props.classTitle}
             </h2>
-            <body>
-                <img src={props.img} alt={"Joshua Baroni Headshot"} style={{width: "60%"}}/>
-                <p>
-                    {props.body}
-                </p>
-            </body>
+            <img src={props.img} alt={"Joshua Baroni Headshot"} style={{width: "60%"}}/>
+            <p>
+                {props.body}
+            </p>
         </div>
     )
 };

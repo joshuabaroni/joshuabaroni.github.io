@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import {pdfjs, Document} from 'react-pdf';
 import classes from './EntryPoint.module.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Menu from '../menu/Menu.js'
 import TextOnly from '../pages/TextOnly.js'
 import Headshot from '../img/ProfilePicBaroni2016.jpg'
+import Resume from "../img/JoshBaroniResume2020.pdf"
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const constants = {
     name: "Joshua Baroni",
@@ -28,7 +32,9 @@ const LinkButton = (props) => {
       </a>
     </Router>
     )
-  }
+}
+
+(() => console.log(Resume))();
 
 class EntryPoint extends Component {
     render() {
@@ -50,6 +56,9 @@ class EntryPoint extends Component {
                     of data architecture and design I am most interested in pursuing. In the
                     meantime, feel free to check out some of the projects I've worked on over
                     the years.`}
+                />
+                <Document
+                    file={Resume}
                 />
             </div>
         </div>

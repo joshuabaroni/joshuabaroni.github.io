@@ -5,14 +5,13 @@ import classes from './Menu.module.css'
 const RenderNavs = (props) => {
     let navLinkComponents = [];
     props.sections.map(section => {
-        navLinkComponents.push(
+        return navLinkComponents.push(
             <Nav.Link className={classes.NavLink} href={`${section}`}>{section}</Nav.Link>
         )
-        console.log("NavLink component added: " + section)
     })
     return (
         <Nav className="Menu">
-            {navLinkComponents /* how to render all components in array*/}
+            {navLinkComponents}
         </Nav>
     )
 }
