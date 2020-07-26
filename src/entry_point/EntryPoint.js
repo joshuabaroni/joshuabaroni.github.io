@@ -44,6 +44,7 @@ class EntryPoint extends Component {
             <LinkButton name={"Facebook"} href="https://www.facebook.com/profile.php?id=100020207475034" />
             <div id={constants.sections[1]} className={classes.BorderedDiv}>
                 <BasicPage ignore={classes.Ignore/* todo needs formatting */}
+                    className={classes.sixtyPercent}
                     classTitle={constants.sections[1]}
                     img={Headshot}
                     body={`Hi, my name is Josh Baroni and welcome to my website!

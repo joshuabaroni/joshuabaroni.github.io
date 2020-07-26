@@ -41,3 +41,9 @@
     background: #61DBFB;
     color: rgb(54, 54, 54);
 }
+
+.sixtyPercent {
+    max-width: 60%;
+    margin: auto;
+    font-size: 12.5pt;
+}
