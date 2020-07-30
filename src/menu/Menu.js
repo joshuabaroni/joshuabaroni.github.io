@@ -4,9 +4,9 @@ import classes from './Menu.module.css'
 
 const RenderNavs = (props) => {
     let navLinkComponents = [];
-    props.sections.map(section => {
+    props.sections.map((section, index) => {
         return navLinkComponents.push(
-            <Nav.Link className={classes.NavLink} href={`#${section}`}>{section}</Nav.Link>
+            <Nav.Link key={index} className={classes.NavLink} href={`#${section}`}>{section}</Nav.Link>
         )
     })
     return (

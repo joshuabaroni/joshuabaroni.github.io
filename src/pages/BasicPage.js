@@ -12,8 +12,10 @@ const BasicPage = ( props ) => {
             </h2>
             <img src={props.img} style={{width: "60%"}}/>
             <p>
+                {console.log(props.body)}
                 {props.body}
             </p>
+            {props.children}
         </div>
     )
 };
