@@ -1,0 +1,50 @@
+.Home {
+    text-align: center;
+}
+
+.AboutMe {
+    max-width: 60%;
+    margin: auto;
+    background: local;
+}
+
+.BorderedDiv {
+    margin: 20px;
+    border-top: solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.Bottom {
+    display: inline-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.Bottom h2 {
+    min-width: 150px;
+}
+
+.LinkButton {
+    border-radius: 25px;
+    position: relative;
+    background: rgb(0, 150, 196);
+    color: rgb(190, 190, 190);
+    padding: auto;
+    min-width: 100px;
+    width: fit-content;
+    height: 35px;
+}
+
+.LinkButton:hover {
+    background: #61DBFB;
+    color: rgb(54, 54, 54);
+}
+
+.sixtyPercent {
+    max-width: 60%;
+    margin: auto;
+    font-size: 12.5pt;
+}
