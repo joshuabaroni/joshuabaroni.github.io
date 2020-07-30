@@ -33,7 +33,8 @@
     background: rgb(0, 150, 196);
     color: rgb(190, 190, 190);
     padding: auto;
-    width: 100px;
+    min-width: 100px;
+    width: fit-content;
     height: 35px;
 }
 
