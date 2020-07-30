@@ -39,7 +39,7 @@ const webpage = {
                     classTitle={`${webpage.sections[2]}: Updated 2020`}
                     img={Resume /* TODO type out instead of screenshot */}
                 >
-                    <LinkButton name='JoshBaroniResume2020.PDF' href='https://docs.google.com/document/d/1XPGBCnOPeDbmYbU79OaEwSEDOC9kUKM1WLgZkvsJT4g/edit?usp=sharing'/>
+                    <LinkButton name="Josh's Resume on Google Drive" href='https://docs.google.com/document/d/1XPGBCnOPeDbmYbU79OaEwSEDOC9kUKM1WLgZkvsJT4g/edit?usp=sharing'/>
                 </BasicPage>
             </div>)
         },
