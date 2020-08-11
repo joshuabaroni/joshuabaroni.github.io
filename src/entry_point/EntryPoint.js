@@ -5,6 +5,7 @@ import Menu from '../menu/Menu.js'
 import BasicPage from '../pages/BasicPage.js'
 import Headshot from '../img/ProfilePicBaroni2016.jpg'
 import Resume from "../img/JoshBaroniResume2020-1.jpg"
+import ProjectTemplate from "../pages/ProjectTemplate"
 
 const webpage = {
     name: "Joshua Baroni",
@@ -77,6 +78,12 @@ const LinkButton = (props) => {
 (() => console.log(Resume))();
 
 class EntryPoint extends Component {
+    state = { show: false }
+
+    showNaiveBayes = () => {
+        this.setState({show: !this.state.show})
+    }
+
     render() {
         return (
         <div key={0} id={webpage.sections[0]} className={classes.Home}>
@@ -85,6 +92,25 @@ class EntryPoint extends Component {
             <LinkButton name={"Github"} href="https://github.com/joshuabaroni" />
             <LinkButton name={"LinkedIn"} href="https://www.linkedin.com/in/joshua-baroni-b50580177/" />
             <LinkButton name={"Facebook"} href="https://www.facebook.com/profile.php?id=100020207475034" />
+            <div style={{ 'height':'20px' }} />
+            {(this.state.show) ? (() => { return (
+                <div>
+                    <button
+                        style={{ 'margin':'auto', 'display': 'block' }}
+                        onClick={this.showNaiveBayes}>
+                            Hide Naive Bayes Project Interface
+                    </button>
+                    <ProjectTemplate className={classes.Project} />
+                </div>
+                ) })() : (() => {
+                    return (
+                        <button
+                            style={{ 'margin':'auto', 'display': 'block' }}
+                            onClick={this.showNaiveBayes}>
+                                Show Naive Bayes Project Interface
+                        </button>
+                    )
+                })()}
             {webpage.subpages.map(page => {
                 return page();
             })}
