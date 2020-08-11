@@ -96,7 +96,7 @@ class EntryPoint extends Component {
             {(this.state.show) ? (() => { return (
                 <div>
                     <button
-                        style={{ 'margin':'auto', 'display': 'block' }}
+                        style={{ 'margin':'auto', 'display': 'block', 'background':'rgb(32, 32, 32)', 'color':'rgb(190, 190, 190)' }}
                         onClick={this.showNaiveBayes}>
                             Hide Naive Bayes Project Interface
                     </button>
@@ -105,7 +105,7 @@ class EntryPoint extends Component {
                 ) })() : (() => {
                     return (
                         <button
-                            style={{ 'margin':'auto', 'display': 'block' }}
+                            style={{ 'margin':'auto', 'display': 'block', 'background':'rgb(32, 32, 32)', 'color':'rgb(190, 190, 190)' }}
                             onClick={this.showNaiveBayes}>
                                 Show Naive Bayes Project Interface
                         </button>
