@@ -5,8 +5,7 @@ import Menu from '../menu/Menu.js'
 import BasicPage from '../pages/BasicPage.js'
 import Headshot from '../img/ProfilePicBaroni2016.jpg'
 import Resume from "../img/JoshBaroniResume2020-1.jpg"
-import ProjectTemplate from "../pages/ProjectTemplate"
-
+import ProjectsPage from '../pages/ProjectsPage'
 const webpage = {
     name: "Joshua Baroni",
     title: "FullStack Developer",
@@ -44,7 +43,14 @@ const webpage = {
                 </BasicPage>
             </div>)
         },
-        /* TODO link project pages */
+        () => {
+            return (
+                <div key={3} id={webpage.sections[3]} className={classes.BorderedDiv}>
+                    <h2>{webpage.sections[3]}</h2>
+                    <ProjectsPage />
+                </div>
+            )
+        },
         () => {
             return (
             <div key={3} id={webpage.sections[4]} className={classes.BorderedDiv}>
@@ -78,11 +84,6 @@ const LinkButton = (props) => {
 (() => console.log(Resume))();
 
 class EntryPoint extends Component {
-    state = { show: false }
-
-    showNaiveBayes = () => {
-        this.setState({show: !this.state.show})
-    }
 
     render() {
         return (
@@ -93,24 +94,6 @@ class EntryPoint extends Component {
             <LinkButton name={"LinkedIn"} href="https://www.linkedin.com/in/joshua-baroni-b50580177/" />
             <LinkButton name={"Facebook"} href="https://www.facebook.com/profile.php?id=100020207475034" />
             <div style={{ 'height':'20px' }} />
-            {(this.state.show) ? (() => { return (
-                <div>
-                    <button
-                        style={{ 'margin':'auto', 'display': 'block', 'background':'rgb(32, 32, 32)', 'color':'rgb(190, 190, 190)' }}
-                        onClick={this.showNaiveBayes}>
-                            Hide Naive Bayes Project Interface
-                    </button>
-                    <ProjectTemplate className={classes.Project} />
-                </div>
-                ) })() : (() => {
-                    return (
-                        <button
-                            style={{ 'margin':'auto', 'display': 'block', 'background':'rgb(32, 32, 32)', 'color':'rgb(190, 190, 190)' }}
-                            onClick={this.showNaiveBayes}>
-                                Show Naive Bayes Project Interface
-                        </button>
-                    )
-                })()}
             {webpage.subpages.map(page => {
                 return page();
             })}

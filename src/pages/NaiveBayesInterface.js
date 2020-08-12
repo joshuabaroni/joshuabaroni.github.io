@@ -46,7 +46,7 @@ async function sendRequestHandler(fileKey) {
             } )
 }
 
-class ProjectTemplate extends Component {
+class NaiveBayesInterface extends Component {
 
     constructor() {
         super();
@@ -124,4 +124,4 @@ class ProjectTemplate extends Component {
     }
 }
 
-export default ProjectTemplate;
+export default NaiveBayesInterface;
