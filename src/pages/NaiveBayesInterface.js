@@ -94,7 +94,7 @@ class NaiveBayesInterface extends Component {
         return <div>
             <h3>Welcome to Naive Bayes Java!</h3>
             <p>The REST API for this project is hosted at</p>
-            <a style={{'display':'block', 'padding-bottom':'1.5em', 'color':'rgb(0, 150, 196)'}} href="https://naivebayesjava.herokuapp.com/swagger-ui.html#/">https://naivebayesjava.herokuapp.com/</a>
+            <a style={{'display':'block', 'paddingBottom':'1.5em', 'color':'rgb(0, 150, 196)'}} href="https://naivebayesjava.herokuapp.com/swagger-ui.html#/">https://naivebayesjava.herokuapp.com/</a>
             <button style={{'display':'inline', 'background':'rgb(32, 32, 32)', 'color':'rgb(190, 190, 190)'}} onClick={this.callListOfFiles}>
                 Get List of Valid Files
             </button>
